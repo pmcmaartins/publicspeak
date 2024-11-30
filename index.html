@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Topic Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #4a90e2; /* Soft Blue */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        #topic {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff; /* White */
+            color: #000; /* Black */
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a área */
+            height: 80px; /* Defina a altura da caixa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #topic-list {
+            position: relative;
+            transition: transform 1s ease-in-out; /* Animação mais rápida */
+        }
+
+        .topic-item {
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold; /* Bold for visibility */
+            background-color: #ff5733; /* Strong Orange */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #c13b1c;
+        }
+        h2 {
+            font-size: 1.2rem; /* Smaller font size */
+            margin-top: 40px; /* Increased spacing from button */
+        }
+        iframe {
+            margin-top: 30px;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Topic Generator</h1>
+    <div id="topic">
+        <div id="topic-list">
+            <span class="topic-item">Click the button to get started!</span>
+        </div>
+    </div>
+    <button onclick="generateRandomTopic()">Generate Topic</button>
+
+    <h2>When ready, let us know, so we can start the timer!</h2>
+    <iframe 
+        id="timer"
+        width="480" 
+        height="270" 
+        src="https://www.youtube.com/embed/3iZg1xBW4tA?rel=0&autoplay=1&mute=1&start=0" 
+        title="Countdown Timer" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+
+    <script src="script.js"></script>
+</body>
+</html>
